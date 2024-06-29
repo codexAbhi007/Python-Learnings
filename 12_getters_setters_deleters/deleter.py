@@ -21,8 +21,9 @@ class Employee:
     @fullname.deleter
     def fullname(self):
         print("Deleted!")
-        self.first = None
-        self.last = None
+        
+        self.first = self.last = None
+  
 
 emp1 = Employee("Abhirup", "Ghosh")
 emp1.first = "Abhi"
@@ -46,4 +47,8 @@ print(emp1.fullname)
 
 ## SO WE DEFINE A DELETER
 del emp1.fullname
+
+print(emp1.first)
+print(emp1.last)
 print(emp1.fullname)
+

@@ -1,5 +1,6 @@
 import os 
-
+help(os)
+print(dir(os))
 if(not os.path.exists ("05_os_module/new_folder")):
     os.mkdir("05_os_module/new_folder")
 

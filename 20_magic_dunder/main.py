@@ -1,11 +1,28 @@
-from employee import Employee
-#@ https://www.geeksforgeeks.org/dunder-magic-methods-python/
+from typing import Any
 
-e = Employee("Abhi")
-print(e) ##this is will call the __str__ method other wise it will show something <employee.Employee object at 0x000001481CF95B50>
-##if str is not present it call the __repr__ method 
-print(str(e)) ##still calls repr
 
-print(repr(e))
+class Employee:
+    def __init__(self,first,last,pay) -> None:
+        self.first = first
+        self.last = last
+        self.email = first + '.' + last + '@gmail.com'
+        self.pay = pay
 
-e()
+    def fullname(self):
+        return f"{self.first} {self.last}"
+    
+    def __repr__(self) -> str:
+        return f"Employee({self.first!r},{self.last!r},{self.pay!r})"
+    
+    def __str__(self) -> str:
+        return f"This is a str method"
+    
+    def __call__(self, *args: Any, **kwds: Any) -> Any:
+        pass
+    
+    
+emp_1 = Employee("Abhi","Ghosh",10000)
+emp_2 = Employee("Corey","Schafer",60000)
+print(emp_1)
+print(str(emp_1))
+print(repr(emp_2))

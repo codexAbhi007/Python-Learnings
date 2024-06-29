@@ -1,14 +1,21 @@
-# we will create a simple generator that will yield three integers. Then we will print these integers by using Python for loop.
+# def square_numbers(nums):
+#     result = []
+#     for i in nums:
+#         result.append(i**2)
+#     return result 
 
+# my_nums = square_numbers([1,2,3,4,5])
 
-def simpleGenerator(): 
-    yield 1            
-    yield 2            
-    yield 3            
-   
+# my_nums = [x*x for x in [1,2,3,4,5]]
 
-for value in simpleGenerator():  
-    print(value)
+# print(my_nums)
 
-r = simpleGenerator()
-print(r) ##Returns a generator object
+def square_numbers(nums):
+    
+    for i in nums:
+        yield(i**2)
+        
+
+my_nums = square_numbers([1,2,3,4,5])
+for i in my_nums:
+    print(i)
