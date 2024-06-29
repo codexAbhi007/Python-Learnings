@@ -1,0 +1,13 @@
+06/29/2024 07:04:10 PM:__main__ERROR:Tried to divide by zero!
+06/29/2024 07:05:25 PM:__main__ERROR:Tried to divide by zero!
+Traceback (most recent call last):
+  File "c:\Users\ABHI\OneDrive\Code-Dock\Python\48_logging_advance\main.py", line 30, in div
+    result = x/y
+             ~^~
+ZeroDivisionError: division by zero
+06/29/2024 07:11:31 PM:__main__ERROR:Tried to divide by zero!
+Traceback (most recent call last):
+  File "c:\Users\ABHI\OneDrive\Code-Dock\Python\48_logging_advance\main.py", line 36, in div
+    result = x/y
+             ~^~
+ZeroDivisionError: division by zero
